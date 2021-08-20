@@ -1,0 +1,129 @@
+/* body */
+body {
+	background: #f3f3f3;
+    font-family: Helvetica, sans-serif;
+    width: 900px;
+    margin: auto auto 80px;
+}
+
+/* header */
+h3.header{
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+/* ----------section---------- */
+
+/* view */
+section.view {
+    margin: 15px 20px;
+}
+
+/* view .main-card */
+section.view .main-card {
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 10px !important;
+}
+
+/* editor */
+section.editor {
+    margin: 15px 20px;
+}
+
+section.editor label {
+    margin-bottom: 7px;
+    display: block;
+    color: gray;
+}
+
+section.editor td {
+    width: 170px;
+}
+
+/* editor .card */
+section.editor .projection-card {
+    height: 55px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000;
+    border-radius: 10px !important;
+}
+section.editor .lonlat-card {
+    width: 480px;
+    height: 160px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    float: left;
+}
+section.editor .color-card {
+    width: auto;
+    height: 160px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin-left: 520px;
+}
+section.editor .lonlat-card-left {
+    width: 60%;
+    float: left;
+}
+section.editor .lonlat-card-right {
+    width: 35%;
+    float: right;
+    margin-left: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* other element */
+section.editor #type-box {
+    width: 31%;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+section.editor #type-box select {
+    width: 100%;
+}
+
+section.editor #blend-box {
+    width: 31%;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+section.editor #blend-box input {
+    width: 100%;
+}
+
+section.editor #lonlat-box {
+    margin-left: 10px;
+}
+
+section.editor #lonlat-box input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+section.editor #color-box {
+    width: 100%;
+    margin-left: 5px;
+}
+
+section.editor #color-box input {
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+/* ----------other---------- */
+
+section #info {
+    margin: 15px 20px;
+}
+
+span {
+    font-size: 16px;
+}
