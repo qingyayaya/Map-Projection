@@ -468,10 +468,10 @@ var sph = new Map('sphereView', 140, 140, "Orthographic");
     
     document.getElementById('default-color').onclick = function() {
         map.forEach(obj => obj.setDefaultColor());
-        document.getElementById('land-color').value = this._landColor;
-        document.getElementById('ocean-color').value = this._oceanColor;
-        document.getElementById('graticule-color').value = this._graticuleColor;
-        document.getElementById('stroke-color').value = this._strokeColor;
+        document.getElementById('land-color').value = bld._landColor;
+        document.getElementById('ocean-color').value = bld._oceanColor;
+        document.getElementById('graticule-color').value = bld._graticuleColor;
+        document.getElementById('stroke-color').value = bld._strokeColor;
     }
 
 })();
