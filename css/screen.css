@@ -1,76 +1,60 @@
-/* body */
 body {
-	background: #f3f3f3;
+    background: #f3f3f3;
     font-family: Helvetica, sans-serif;
     width: 900px;
     margin: auto auto 80px;
 }
 
-/* header */
-h3.header{
+h3.header {
     text-align: center;
     margin-top: 1.5em;
 }
 
-/* ----------section---------- */
-
-/* view */
-section.view {
-    margin: 15px 20px;
-}
-
-/* view .main-card */
-section.view .main-card {
-    text-align: center;
+.card {
+    margin-bottom: 15px;
     border: 1px solid #000;
     border-radius: 10px !important;
 }
 
-/* editor */
-section.editor {
-    margin: 15px 20px;
-}
-
-section.editor label {
+.card label {
     margin-bottom: 7px;
     display: block;
     color: gray;
 }
 
-section.editor td {
+.card td {
     width: 170px;
 }
 
-/* editor .card */
-section.editor .projection-card {
+.view {
+    text-align: center;
+}
+
+.projection {
     height: 55px;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #000;
-    border-radius: 10px !important;
 }
-section.editor .lonlat-card {
+
+.lonlat {
     width: 480px;
     height: 160px;
     padding: 10px;
-    border: 1px solid #000;
-    border-radius: 10px;
     float: left;
 }
-section.editor .color-card {
+
+.color {
     width: auto;
     height: 160px;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #000;
-    border-radius: 10px;
     margin-left: 520px;
 }
-section.editor .lonlat-card-left {
+
+.lonlat-left {
     width: 60%;
     float: left;
 }
-section.editor .lonlat-card-right {
+
+.lonlat-right {
     width: 35%;
     float: right;
     margin-left: 20px;
@@ -79,51 +63,80 @@ section.editor .lonlat-card-right {
 }
 
 /* other element */
-section.editor #type-box {
+.projection-box {
     width: 31%;
     margin-left: 10px;
     display: inline-block;
 }
 
-section.editor #type-box select {
+.projection-box select {
     width: 100%;
 }
 
-section.editor #blend-box {
+.blend-box {
     width: 31%;
     margin-left: 10px;
     display: inline-block;
 }
 
-section.editor #blend-box input {
+.blend-box input {
     width: 100%;
 }
 
-section.editor #lonlat-box {
+.lonlat-box {
     margin-left: 10px;
 }
 
-section.editor #lonlat-box input {
+.lonlat-box input {
     width: 100%;
     margin-bottom: 10px;
 }
 
-section.editor #color-box {
+.color-box {
     width: 100%;
     margin-left: 5px;
 }
 
-section.editor #color-box input {
+.color-box input {
     width: 90%;
     margin-bottom: 10px;
 }
 
-/* ----------other---------- */
-
-section #info {
-    margin: 15px 20px;
+.save-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: inline-block;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    background-clip: padding-box;
 }
 
-span {
-    font-size: 16px;
+.save-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    text-decoration: none;
+    background: 0 0;
+}
+
+.save-menu>li>a:hover,
+.save-menu>li>a:focus {
+    text-decoration: none;
+    color: #262626;
+    background-color: #f5f5f5;
 }
