@@ -4,16 +4,17 @@
 <head>
     <title>Map Projection</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/screen.css" />
+    <link rel="icon" href="./pics/avatar.jpeg">
+    <link rel="stylesheet" href="./css/screen.css"/>
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://d3js.org/d3-geo-projection.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v4.min.js"></script>
     <script src="https://d3js.org/topojson.v2.min.js"></script>
 </head>
 
 <body>
 
     <!--标题-->
-    <h3 class="header">Map&nbsp;Projection</h3>
+    <h3 class="header">Map Projection</h3>
 
     <!--视图-->
     <div class="card view" id="view"></div>
@@ -21,11 +22,11 @@
     <!--类型-->
     <div class="card projection">
         <div class="projection-box">
-            <label>Projection&nbsp;1</label>
+            <label>Projection 1</label>
             <select class="menu" id="menu1"></select>
         </div>
         <div class="projection-box">
-            <label>Projection&nbsp;2</label>
+            <label>Projection 2</label>
             <select class="menu" id="menu2"></select>
         </div>
         <div class="blend-box">
@@ -57,11 +58,11 @@
     <div class="card color">
         <div style="width: 50%; float: left;">
             <div class="color-box">
-                <label>Land&nbsp;Color</label>
+                <label>Land Color</label>
                 <input type="color" id="land-color">
             </div>
             <div class="color-box">
-                <label>Ocean&nbsp;Color</label>
+                <label>Ocean Color</label>
                 <input type="color" id="ocean-color">
             </div>
             <div class="color-box">
@@ -70,11 +71,11 @@
         </div>
         <div style="width: 50%; float: right;">
             <div class="color-box">
-                <label>Graticule&nbsp;Color</label>
+                <label>Graticule Color</label>
                 <input type="color" id="graticule-color">
             </div>
             <div class="color-box">
-                <label>Stroke&nbsp;Color</label>
+                <label>Stroke Color</label>
                 <input type="color" id="stroke-color">
             </div>
             <div class="color-box">
@@ -85,7 +86,7 @@
 
     <!--信息-->
     <div>
-        <h3>Quick&nbsp;Reference</h3>
+        <h3>Quick Reference</h3>
         <p>Mouse drag to change the central of projection. Right click to save.</p>
     </div>
 
@@ -95,28 +96,27 @@
         <div style="text-align: center;">
             <span style="float: left;">
                 <a href="https://gitee.com/qingyaya/mapprojection/stargazers" target="_blank">
-                    <img style="vertical-align: middle;"
-                        src="https://gitee.com/qingyaya/mapprojection/badge/star.svg?theme=dark" alt='star'></img></a>
-                MIT Licensed,&nbsp;2021
+                    <img style="vertical-align: middle;" src="https://gitee.com/qingyaya/mapprojection/badge/star.svg?theme=dark" alt='star'></img>
+                </a>
+                MIT Licensed, 2022
             </span>
             <span>
                 博客：<a href="https://qingyayaya.github.io" target="_blank">青崖同学</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                微信公众号：<a target="_blank"
-                    href="https://mp.weixin.qq.com/mp/homepage?__biz=Mzg3MjY1MzY4Mg==&hid=1&sn=3cb69e7664ca6622d4cd46e6e727a2c3&scene=18&devicetype=android-30&version=28000653&lang=zh_CN&nettype=ctnet&ascene=7&session_us=gh_4858133c6950&pass_ticket=gSgFHEOyXA8mw5vsLAPfXKGw7%2F036G2Rcn%2B23RNFar5I0qr8zdXeyppv2zHRjHlq&wx_header=1&scene=1">青崖同学</a>
+                微信公众号：<a target="_blank" href="https://mp.weixin.qq.com/mp/homepage?__biz=Mzg3MjY1MzY4Mg==&hid=1&sn=3cb69e7664ca6622d4cd46e6e727a2c3&scene=18">青崖同学</a>
             </span>
             <span style="float: right;">
-                Powered&nbsp;by&nbsp;<a href="https://github.com/d3" target="_blank">d3.js</a>
+                Powered by <a href="https://github.com/d3" target="_blank">d3.js</a>
             </span>
         </div>
     </div>
 
     <!--Fork me-->
     <a href="https://gitee.com/qingyaya/mapprojection/" target="_blank">
-        <img style="position: absolute; top: 0; right: 0; border: 0;"
-            src="https://gitee.com/ifork/weshop/widgets/widget_1.svg" alt="Fork me on Gitee"></img></a>
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://gitee.com/ifork/weshop/widgets/widget_1.svg" alt="Fork me on Gitee"></img>
+    </a>
 
     <!--代码-->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 
 </body>
 

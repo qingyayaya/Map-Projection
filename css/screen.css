@@ -12,8 +12,12 @@ h3.header {
 
 .card {
     margin-bottom: 15px;
-    border: 1px solid #000;
+    border: 1px solid #999;
     border-radius: 10px !important;
+}
+
+.card:hover {
+    border-color: #000;
 }
 
 .card label {

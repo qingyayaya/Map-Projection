@@ -1,63 +1,76 @@
 class Map {
 
     static options = [
-        { name: "Aitoff", projection: d3.geoAitoff() },
-        { name: "Albers", projection: d3.geoAlbers().parallels([20, 50]) },
-        { name: "August", projection: d3.geoAugust() },
-        { name: "Baker", projection: d3.geoBaker() },
-        { name: "Boggs", projection: d3.geoBoggs() },
-        { name: "Bonne", projection: d3.geoBonne() },
-        { name: "Bottomley", projection: d3.geoBottomley() },
-        { name: "Bromley", projection: d3.geoBromley() },
-        { name: "Collignon", projection: d3.geoCollignon() },
-        { name: "Conic Equal Area", projection: d3.geoConicEqualArea() },
-        { name: "Conic Equidistant", projection: d3.geoConicEquidistant() },
-        { name: "Craster Parabolic", projection: d3.geoCraster() },
-        { name: "Cylindrical Equal-Area", projection: d3.geoCylindricalEqualArea() },
-        { name: "Eckert I", projection: d3.geoEckert1() },
-        { name: "Eckert II", projection: d3.geoEckert2() },
-        { name: "Eckert III", projection: d3.geoEckert3() },
-        { name: "Eckert IV", projection: d3.geoEckert4() },
-        { name: "Eckert V", projection: d3.geoEckert5() },
-        { name: "Eckert VI", projection: d3.geoEckert6() },
-        { name: "Eisenlohr", projection: d3.geoEisenlohr() },
-        { name: "Equirectangular", projection: d3.geoEquirectangular() },
-        { name: "Fahey", projection: d3.geoFahey() },
-        { name: "Foucaut", projection: d3.geoFoucaut() },
-        { name: "Gilbert", projection: d3.geoGilbert() },
-        { name: "Ginzburg IX", projection: d3.geoGinzburg9() },
-        { name: "Goode Homolosine", projection: d3.geoHomolosine() },
-        { name: "Gringorten", projection: d3.geoGringorten() },
-        { name: "Guyou", projection: d3.geoGuyou() },
-        { name: "Hammer", projection: d3.geoHammer() },
-        { name: "Hill", projection: d3.geoHill() },
-        { name: "Kavrayskiy VII", projection: d3.geoKavrayskiy7() },
-        { name: "Lambert cylindrical equal-area", projection: d3.geoCylindricalEqualArea() },
-        { name: "Lagrange", projection: d3.geoLagrange() },
-        { name: "Larrivée", projection: d3.geoLarrivee() },
-        { name: "Laskowski", projection: d3.geoLaskowski() },
-        { name: "Loximuthal", projection: d3.geoLoximuthal() },
-        { name: "Miller", projection: d3.geoMiller() },
-        { name: "McBryde–Thomas Flat-Polar Parabolic", projection: d3.geoMtFlatPolarParabolic() },
-        { name: "McBryde–Thomas Flat-Polar Quartic", projection: d3.geoMtFlatPolarQuartic() },
-        { name: "McBryde–Thomas Flat-Polar Sinusoidal", projection: d3.geoMtFlatPolarSinusoidal() },
-        { name: "Mollweide", projection: d3.geoMollweide() },
-        { name: "Natural Earth", projection: d3.geoNaturalEarth() },
-        { name: "Nell–Hammer", projection: d3.geoNellHammer() },
-        { name: "Orthographic", projection: d3.geoOrthographic() },
-        { name: "Patterson", projection: d3.geoPatterson() },
-        { name: "Polyconic", projection: d3.geoPolyconic() },
-        { name: "Rectangular Polyconic", projection: d3.geoRectangularPolyconic() },
-        { name: "Robinson", projection: d3.geoRobinson() },
-        { name: "Sinusoidal", projection: d3.geoSinusoidal() },
-        { name: "Sinu-Mollweide", projection: d3.geoSinuMollweide() },
-        { name: "Times", projection: d3.geoTimes() },
-        { name: "van der Grinten", projection: d3.geoVanDerGrinten() },
-        { name: "van der Grinten IV", projection: d3.geoVanDerGrinten4() },
-        { name: "Wagner IV", projection: d3.geoWagner4() },
-        { name: "Wagner VI", projection: d3.geoWagner6() },
-        { name: "Wagner VII", projection: d3.geoWagner7() },
-        { name: "Winkel Tripel", projection: d3.geoWinkel3() }
+        { name: 'Aitoff', projection: d3.geoAitoff() },
+        { name: 'Albers', projection: d3.geoAlbers().parallels([20, 50]) },
+        { name: 'August', projection: d3.geoAugust() },
+        { name: 'Baker', projection: d3.geoBaker() },
+        { name: 'Boggs', projection: d3.geoBoggs() },
+        { name: 'Bonne', projection: d3.geoBonne() },
+        { name: 'Bottomley', projection: d3.geoBottomley() },
+        { name: 'Bromley', projection: d3.geoBromley() },
+        { name: 'Collignon', projection: d3.geoCollignon() },
+        { name: 'Conic Equal Area', projection: d3.geoConicEqualArea() },
+        { name: 'Conic Equidistant', projection: d3.geoConicEquidistant() },
+        { name: 'Craster Parabolic', projection: d3.geoCraster() },
+        { name: 'Cylindrical Equal Area', projection: d3.geoCylindricalEqualArea() },
+        { name: 'Cylindrical Stereographic', projection: d3.geoCylindricalStereographic() },
+        { name: 'Eckert I', projection: d3.geoEckert1() },
+        { name: 'Eckert II', projection: d3.geoEckert2() },
+        { name: 'Eckert III', projection: d3.geoEckert3() },
+        { name: 'Eckert IV', projection: d3.geoEckert4() },
+        { name: 'Eckert V', projection: d3.geoEckert5() },
+        { name: 'Eckert VI', projection: d3.geoEckert6() },
+        { name: 'Eisenlohr', projection: d3.geoEisenlohr() },
+        { name: 'Equirectangular', projection: d3.geoEquirectangular() },
+        { name: 'Fahey', projection: d3.geoFahey() },
+        { name: 'Foucaut', projection: d3.geoFoucaut() },
+        { name: 'Foucaut Sinusoidal', projection: d3.geoFoucautSinusoidal() },
+        { name: 'Gilbert', projection: d3.geoGilbert() },
+        { name: 'Ginzburg IV', projection: d3.geoGinzburg4() },
+        { name: 'Ginzburg V', projection: d3.geoGinzburg5() },
+        { name: 'Ginzburg VI', projection: d3.geoGinzburg6() },
+        { name: 'Ginzburg VIII', projection: d3.geoGinzburg8() },
+        { name: 'Ginzburg IX', projection: d3.geoGinzburg9() },
+        { name: 'Gringorten', projection: d3.geoGringorten() },
+        { name: 'Guyou', projection: d3.geoGuyou() },
+        { name: 'Hammer', projection: d3.geoHammer() },
+        { name: 'Hill', projection: d3.geoHill() },
+        { name: 'Homolosine', projection: d3.geoHomolosine() },
+        { name: 'Hufnagel', projection: d3.geoHufnagel() },
+        { name: 'Hyperelliptical', projection: d3.geoHyperelliptical() },
+        { name: 'Kavrayskiy VII', projection: d3.geoKavrayskiy7() },
+        { name: 'Lagrange', projection: d3.geoLagrange() },
+        { name: 'Larrivée', projection: d3.geoLarrivee() },
+        { name: 'Laskowski', projection: d3.geoLaskowski() },
+        { name: 'Loximuthal', projection: d3.geoLoximuthal() },
+        { name: 'Miller', projection: d3.geoMiller() },
+        { name: 'McBryde–Thomas Flat-Polar Parabolic', projection: d3.geoMtFlatPolarParabolic() },
+        { name: 'McBryde–Thomas Flat-Polar Quartic', projection: d3.geoMtFlatPolarQuartic() },
+        { name: 'McBryde–Thomas Flat-Polar Sinusoidal', projection: d3.geoMtFlatPolarSinusoidal() },
+        { name: 'Mollweide', projection: d3.geoMollweide() },
+        { name: 'Natural Earth I', projection: d3.geoNaturalEarth1() },
+        { name: 'Natural Earth II', projection: d3.geoNaturalEarth2() },
+        { name: 'Nell–Hammer', projection: d3.geoNellHammer() },
+        { name: 'Nicolosi', projection: d3.geoNicolosi() },
+        { name: 'Orthographic', projection: d3.geoOrthographic() },
+        { name: 'Patterson', projection: d3.geoPatterson() },
+        { name: 'Polyconic', projection: d3.geoPolyconic() },
+        { name: 'Rectangular Polyconic', projection: d3.geoRectangularPolyconic() },
+        { name: 'Robinson', projection: d3.geoRobinson() },
+        { name: 'Satellite', projection: d3.geoSatellite() },
+        { name: 'Sinusoidal', projection: d3.geoSinusoidal() },
+        { name: 'Sinu-Mollweide', projection: d3.geoSinuMollweide() },
+        { name: 'Times', projection: d3.geoTimes() },
+        { name: 'van der Grinten', projection: d3.geoVanDerGrinten() },
+        { name: 'van der Grinten II', projection: d3.geoVanDerGrinten2() },
+        { name: 'van der Grinten III', projection: d3.geoVanDerGrinten3() },
+        { name: 'van der Grinten IV', projection: d3.geoVanDerGrinten4() },
+        { name: 'Wagner', projection: d3.geoWagner() },
+        { name: 'Wagner IV', projection: d3.geoWagner4() },
+        { name: 'Wagner VI', projection: d3.geoWagner6() },
+        { name: 'Wagner VII', projection: d3.geoWagner7() },
+        { name: 'Winkel III', projection: d3.geoWinkel3() }
     ].map(opt => {
         opt.projection.rotate([0, 0]).center([0, 0]);
         return opt;
@@ -74,11 +87,11 @@ class Map {
         })[0];
     }
 
-    _landColor = "#dfc57b";
-    _oceanColor = "#46a3c4";
-    _graticuleColor = "#777777";
-    _strokeColor = "#000000";
-    jsonURL = "./json/world-110m.json";
+    _landColor = '#dfc57b';
+    _oceanColor = '#46a3c4';
+    _graticuleColor = '#777777';
+    _strokeColor = '#000000';
+    jsonURL = './json/world-110m.json';
 
     constructor(envID, width = 700, height = 350, ...projection) {
         this.envID = envID;
@@ -127,34 +140,34 @@ class Map {
         });
 
         // 生成SVG
-        var svg = this.env.append("svg")
-            .attr("width", this.width)
-            .attr("height", this.height);
+        var svg = this.env.append('svg')
+            .attr('width', this.width)
+            .attr('height', this.height);
 
-        svg.append("defs")
-            .append("path")
-            .datum({ type: "Sphere" })
-            .attr("id", `${this.envID}sphere`);
+        svg.append('defs')
+            .append('path')
+            .datum({ type: 'Sphere' })
+            .attr('id', `${this.envID}sphere`);
 
-        svg.append("use")
-            .attr("class", "stroke")
-            .attr("fill", "none")
-            .attr("stroke-width", "2px")
-            .attr("stroke", this._strokeColor)
-            .attr("xlink:href", `#${this.envID}sphere`);
+        svg.append('use')
+            .attr('class', 'stroke')
+            .attr('fill', 'none')
+            .attr('stroke-width', '2px')
+            .attr('stroke', this._strokeColor)
+            .attr('xlink:href', `#${this.envID}sphere`);
 
-        svg.append("use")
-            .attr("class", "ocean")
-            .attr("fill", this._oceanColor)
-            .attr("xlink:href", `#${this.envID}sphere`);
+        svg.append('use')
+            .attr('class', 'ocean')
+            .attr('fill', this._oceanColor)
+            .attr('xlink:href', `#${this.envID}sphere`);
 
-        svg.append("path")
+        svg.append('path')
             .datum(d3.geoGraticule())
-            .attr("class", "graticule")
-            .attr("fill", "none")
-            .attr("stroke-width", ".5px")
-            .attr("stroke-opacity", ".5")
-            .attr("stroke", this._graticuleColor);
+            .attr('class', 'graticule')
+            .attr('fill', 'none')
+            .attr('stroke-width', '.5px')
+            .attr('stroke-opacity', '.5')
+            .attr('stroke', this._graticuleColor);
 
         this.getTopoJSON();
         this.svg = svg;
@@ -182,9 +195,9 @@ class Map {
         }
 
         if (tf) {
-            this.env.call(d3.drag().on("drag", dragged));
+            this.env.call(d3.drag().on('drag', dragged));
         } else {
-            this.env.call(d3.drag().on("drag", null));
+            this.env.on('.drag', null);
         }
     }
 
@@ -222,24 +235,24 @@ class Map {
         // svg2image
         var image = new Image();
         image.src = svgURL;
-        var canvas = document.createElement("canvas");
+        var canvas = document.createElement('canvas');
         canvas.width = this.width;
         canvas.height = this.height;
-        var context = canvas.getContext("2d");
+        var context = canvas.getContext('2d');
         context.fillStyle = '#fff'; // #fff设置保存后的png背景是白色
         context.fillRect(0, 0, 10000, 5000); // 背景尽量设得大一点
 
         // 等图片加载好之后再执行，否则会输出空白
         image.onload = () => {
             context.drawImage(image, 0, 0);
-            d3.select('#savepng').attr('href', canvas.toDataURL("image/png"));
-            d3.select('#savejpg').attr('href', canvas.toDataURL("image/jpeg"));
+            d3.select('#savepng').attr('href', canvas.toDataURL('image/png'));
+            d3.select('#savejpg').attr('href', canvas.toDataURL('image/jpeg'));
         };
     }
 
     ToSVG() {
         // get svg source.
-        var source = '<?xml version="1.0" standalone="no"?>\r\n' + new XMLSerializer().serializeToString(this.svg.node());
+        var source = '<?xml version="1.0" standalone="no"?>' + new XMLSerializer().serializeToString(this.svg.node());
 
         // add name spaces.
         if (!source.match(/^<svg[^>]+xmlns="http\:\/\/www\.w3\.org\/2000\/svg"/)) {
@@ -250,16 +263,16 @@ class Map {
         }
 
         // convert svg source to URI data scheme.
-        return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(source);
+        return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(source);
     }
 
     getTopoJSON() {
         d3.json(this.jsonURL, (error, data) => {
             if (error) throw error;
-            this.svg.insert("path", `#${this.envID} .graticule`)
+            this.svg.insert('path', `#${this.envID} .graticule`)
                 .datum(topojson.feature(data, data.objects.land))
-                .attr("class", "land")
-                .attr("fill", this._landColor);
+                .attr('class', 'land')
+                .attr('fill', this._landColor);
             this.refresh();
         });
     }
@@ -292,7 +305,7 @@ class Map {
         
             projection.rotate([this.lon, this.lat, this.gamma])
                 .fitExtent([[10, 10], [this.width - 10, this.height - 10]], {
-                    type: "Sphere"
+                    type: 'Sphere'
                 });
         
             var path = d3.geoPath(projection);
@@ -300,7 +313,7 @@ class Map {
             return path(d)
         }
 
-        this.svg.selectAll("path").attr("d", getProjection);
+        this.svg.selectAll('path').attr('d', getProjection);
     }
 
     setProjection(name, idx) {
@@ -370,7 +383,7 @@ class Map {
 }
 
 var bld = new Map('view');
-var sph = new Map('sphereView', 140, 140, "Orthographic");
+var sph = new Map('sphereView', 140, 140, 'Orthographic');
 
 (function() {
 
@@ -378,8 +391,8 @@ var sph = new Map('sphereView', 140, 140, "Orthographic");
 
     // 设置拖拽回调
     bld.ondrag = function() {
-        document.getElementById('slider-longitude').value = this.lon;
-        document.getElementById('slider-latitude').value = this.lat;
+        d3.select('#slider-longitude').property('value', this.lon);
+        d3.select('#slider-latitude').property('value', this.lat);
         sph.lon = this.lon;
         sph.lat = this.lat;
         sph.refresh();
@@ -394,19 +407,19 @@ var sph = new Map('sphereView', 140, 140, "Orthographic");
 
     // 数据绑定给控件
     d3.selectAll('.menu')
-        .selectAll("option")
+        .selectAll('option')
         .data(Map.options)
-        .enter().append("option")
+        .enter().append('option')
         .text((d) => { return d.name; });
-    d3.select("#menu1").property("value", menu1);
-    d3.select("#menu2").property("value", menu2);
-    d3.select("#land-color").property("value", bld._landColor);
-    d3.select("#graticule-color").property("value", bld._graticuleColor);
-    d3.select("#ocean-color").property("value", bld._oceanColor);
-    d3.select("#stroke-color").property("value", bld._strokeColor);
+    d3.select('#menu1').property('value', menu1);
+    d3.select('#menu2').property('value', menu2);
+    d3.select('#land-color').property('value', bld._landColor);
+    d3.select('#graticule-color').property('value', bld._graticuleColor);
+    d3.select('#ocean-color').property('value', bld._oceanColor);
+    d3.select('#stroke-color').property('value', bld._strokeColor);
 
     var timer = d3.timer(elapsed => {
-        document.getElementById('slider-blend').value = elapsed * 0.04;
+        d3.select('#slider-blend').property('value', elapsed * 0.04);
         bld.blend = elapsed / 2500;
         bld.refresh();
         if (elapsed > 2500) {
@@ -414,64 +427,64 @@ var sph = new Map('sphereView', 140, 140, "Orthographic");
         }
     }, 100);
 
-    /* 绑定回调 */
-    document.getElementById('menu1').onchange = function() {
+    /* 控件绑定回调 */
+    d3.select('#menu1').on('change', function() {
         bld.setProjection(this.value, 1);
-    }
+    });
 
-    document.getElementById('menu2').onchange = function() {
+    d3.select('#menu2').on('change', function() {
         bld.setProjection(this.value, 2);
-    }
+    });
 
-    document.getElementById('slider-blend').oninput = function() {
+    d3.select('#slider-blend').on('input', function() {
         bld.setBlend(this.value / 100);
-    }
+    });
 
-    document.getElementById('slider-longitude').oninput = function() {
+    d3.select('#slider-longitude').on('input', function() {
         map.forEach(obj => obj.setLongitude(this.value));
-    }
+    });
 
-    document.getElementById('slider-latitude').oninput = function() {
+    d3.select('#slider-latitude').on('input', function() {
         map.forEach(obj => obj.setLatitude(this.value));
-    }
+    });
 
-    document.getElementById('slider-gamma').oninput = function() {
+    d3.select('#slider-gamma').on('input', function() {
         map.forEach(obj => obj.setGamma(this.value));
-    }
+    });
 
-    document.getElementById('slider-latitude').oninput = function() {
+    d3.select('#slider-latitude').on('input', function() {
         map.forEach(obj => obj.setLatitude(this.value));
-    }
+    });
 
-    document.getElementById('land-color').oninput = function() {
+    d3.select('#land-color').on('input', function() {
         map.forEach(obj => obj.setLandColor(this.value));
-    }
+    });
 
-    document.getElementById('graticule-color').oninput = function() {
+    d3.select('#graticule-color').on('input', function() {
         map.forEach(obj => obj.setGraticuleColor(this.value));
-    }
+    });
 
-    document.getElementById('ocean-color').oninput = function() {
+    d3.select('#ocean-color').on('input', function() {
         map.forEach(obj => obj.setOceanColor(this.value));
-    }
+    });
 
-    document.getElementById('stroke-color').oninput = function() {
+    d3.select('#stroke-color').on('input', function() {
         map.forEach(obj => obj.setStrokeColor(this.value));
-    }
+    });
 
-    document.getElementById('default-view').onclick = function() {
+    d3.select('#default-view').on('click', function() {
         map.forEach(obj => obj.setDefaultView());
-        document.getElementById('slider-longitude').value = 0;
-        document.getElementById('slider-latitude').value = 0;
-        document.getElementById('slider-gamma').value = 0;
-    }
+        d3.select('#slider-longitude').property('value', 0);
+        d3.select('#slider-latitude').property('value', 0);
+        d3.select('#slider-gamma').property('value', 0);
+    });
     
-    document.getElementById('default-color').onclick = function() {
+    d3.select('#default-color').on('click', function() {
         map.forEach(obj => obj.setDefaultColor());
-        document.getElementById('land-color').value = bld._landColor;
-        document.getElementById('ocean-color').value = bld._oceanColor;
-        document.getElementById('graticule-color').value = bld._graticuleColor;
-        document.getElementById('stroke-color').value = bld._strokeColor;
-    }
+        d3.select('#land-color').property('value', bld._landColor);
+        d3.select('#ocean-color').property('value', bld._oceanColor);
+        d3.select('#graticule-color').property('value', bld._graticuleColor);
+        d3.select('#stroke-color').property('value', bld._strokeColor);
+    });
 
 })();
