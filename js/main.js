@@ -98,15 +98,15 @@ class Map {
         this.width = width;
         this.height = height;
 
-        // 投影中心
+        // central of projection
         this.lon = 0;
         this.lat = 0;
         this.gamma = 0;
 
-        // 指定了两种投影的前提下，表示混合度
+        // only for two projections
         this.blend = 0;
 
-        // 在html上生成Map
+        // generate Map on html
         this.genernateMap();
 
         // 
@@ -123,12 +123,10 @@ class Map {
     genernateMap() {
         this.env = d3.select(`#${this.envID}`);
 
-        // 给this.env添加右键回调
+        // add a right-click callback to this.env
         this.env.on('contextmenu', () => {
             const contextMenu = () => {
-                // 生成右键菜单
                 this.createContextMenu(d3.event.pageX - 10, d3.event.pageY - 10);
-                // 
                 d3.event.preventDefault();
             }
 
@@ -139,7 +137,7 @@ class Map {
             }
         });
 
-        // 生成SVG
+        // generate SVG
         var svg = this.env.append('svg')
             .attr('width', this.width)
             .attr('height', this.height);
@@ -190,7 +188,7 @@ class Map {
                 this.lat += 360;
             }
     
-            this.ondrag && this.ondrag(); // 用户设置的回调
+            this.ondrag && this.ondrag(); // callbacks set by the user
             this.refresh();
         }
 
@@ -205,7 +203,7 @@ class Map {
 
         var filename = 'image';
 
-        // 生成右键菜单
+        // generate right-click menu
         const menu = d3.select('body')
             .append('ul')
             .classed('save-menu', true)
@@ -217,7 +215,7 @@ class Map {
 
         var svgURL = this.ToSVG();
 
-        // 添加选项
+        // add option
         const list = menu.append('li');
         list.append('a')
             .text('Save as SVG')
@@ -239,10 +237,10 @@ class Map {
         canvas.width = this.width;
         canvas.height = this.height;
         var context = canvas.getContext('2d');
-        context.fillStyle = '#fff'; // #fff设置保存后的png背景是白色
-        context.fillRect(0, 0, 10000, 5000); // 背景尽量设得大一点
+        context.fillStyle = '#fff'; // #fff set the saved png background to be white
+        context.fillRect(0, 0, 10000, 5000); // make the background as large as possible
 
-        // 等图片加载好之后再执行，否则会输出空白
+        // execute after the image is loaded, otherwise it will output blank
         image.onload = () => {
             context.drawImage(image, 0, 0);
             d3.select('#savepng').attr('href', canvas.toDataURL('image/png'));
@@ -296,7 +294,7 @@ class Map {
                 ];
             }
 
-            // 单一投影or混合投影
+            // single projection or mixed projection
             if (this.projection.length == 1) {
                 var projection = this.projection[0];
             } else {
@@ -317,9 +315,9 @@ class Map {
     }
 
     setProjection(name, idx) {
-        // 验证name是否有效
+        // verify name is valid
         var opt = Map.validateProjection(name);
-        // 保险起见
+        // in case
         if (idx != 1 && idx != 2) {
             idx = 1;
         }
@@ -389,7 +387,7 @@ var sph = new Map('sphereView', 140, 140, 'Orthographic');
 
     var map = [bld, sph];
 
-    // 设置拖拽回调
+    // set drag callback
     bld.ondrag = function() {
         d3.select('#slider-longitude').property('value', this.lon);
         d3.select('#slider-latitude').property('value', this.lat);
@@ -399,13 +397,13 @@ var sph = new Map('sphereView', 140, 140, 'Orthographic');
     }
     bld.draggable(true);
 
-    // 随机生成两种投影，并设置给bld
+    // randomly generate two projections and set them to bld
     var menu1 = Map.getRandomOption();
     var menu2 = Map.getRandomOption();
     bld.setProjection(menu1, 1);
     bld.setProjection(menu2, 2);
 
-    // 数据绑定给控件
+    // data binding
     d3.selectAll('.menu')
         .selectAll('option')
         .data(Map.options)
@@ -427,7 +425,7 @@ var sph = new Map('sphereView', 140, 140, 'Orthographic');
         }
     }, 100);
 
-    /* 控件绑定回调 */
+    /* binding callback */
     d3.select('#menu1').on('change', function() {
         bld.setProjection(this.value, 1);
     });

@@ -1,10 +1,10 @@
 # Map Projection
 
-一个[地图投影的网页](https://qingyaya.gitee.io/mapprojection)：
+A [Map Projection](https://qingyayaya.github.io/Map-Projection) Webpage:
 
 <img align="center" width="500" src="./pics/shot.png">
 
-支持的投影：
+Supported projections:
 
 - [Aitoff](https://github.com/d3/d3-geo-projection/#geoAitoff)
 - [Albers](https://github.com/d3/d3-geo-projection/#geoAlbers)
